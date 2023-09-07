@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap");
+$fontPrimary: "Arimo", sans-serif;
+
+$colorBlue200: #03045e;
+$colorBlue100: #00b4d8;
+$colorYellow: #ff9f1c;
+$colorWhite: #fff;
+$colorGray: #ccc9c9;
+$colorBlack: #000;
+
+:root {
+  --blue200: #{$colorBlue200};
+  --blue100: #{$colorBlue100};
+  --yellow: #{$colorYellow};
+  --white: #{$colorWhite};
+  --gray: #{$colorGray};
+  --black: #{$colorBlack};
+}
+
+@mixin breakpoints($point) {
+  @if $point == md {
+    @media (min-width: 64em) {
+      @content;
+    }
+  }
+}
